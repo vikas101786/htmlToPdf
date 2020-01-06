@@ -43,8 +43,11 @@ public class HTMLPDFDocTest {
 		    save(pdf);
 	  }
 	  
+	  // PDF generation for Arabic is not working
 	  public void testArabicPDF() throws Exception {
+		     //  PDFDoc pdf = PDFDocFactory.getPDFDoc("test_ab.pdf", AB_HTML_CODE); 
 		    PDFDoc pdf = PDFDocFactory.getPDFDoc("test_ab.pdf", new String(AB_HTML_CODE.getBytes()));
+		    // Tried UTF-8 , cp1256 encoding
 		    pdf.setEncoding("ISO_8859_1");
 		    save(pdf);
 	  }
